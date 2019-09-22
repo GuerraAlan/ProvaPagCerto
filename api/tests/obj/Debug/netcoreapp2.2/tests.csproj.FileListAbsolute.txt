@@ -1,0 +1,14 @@
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\tests.deps.json
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\tests.runtimeconfig.json
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\tests.runtimeconfig.dev.json
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\tests.dll
+C:\Users\alanc\source\repos\api\tests\bin\Debug\netcoreapp2.2\tests.pdb
+C:\Users\alanc\source\repos\api\tests\obj\Debug\netcoreapp2.2\tests.csprojAssemblyReference.cache
+C:\Users\alanc\source\repos\api\tests\obj\Debug\netcoreapp2.2\tests.csproj.CoreCompileInputs.cache
+C:\Users\alanc\source\repos\api\tests\obj\Debug\netcoreapp2.2\tests.AssemblyInfoInputs.cache
+C:\Users\alanc\source\repos\api\tests\obj\Debug\netcoreapp2.2\tests.AssemblyInfo.cs
+C:\Users\alanc\source\repos\api\tests\obj\Debug\netcoreapp2.2\tests.dll
+C:\Users\alanc\source\repos\api\tests\obj\Debug\netcoreapp2.2\tests.pdb
