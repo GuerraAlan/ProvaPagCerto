@@ -14,7 +14,7 @@ namespace api.Model.ViewModel
         public double? Amount { get; set; }
         [Display(Name = "installmentsAmmount"), JsonRequired, JsonInstallmentRange]
         public int? InstallmentsAmmount { get; set; }
-        [Display(Name = "credicCardNumber"), JsonRequired, JsonCreditCard]
+        [Display(Name = "credicCardNumber"), JsonRequired]
         public string CreditCardNumber { get; set; }
 
         public Transaction Map() => new Transaction

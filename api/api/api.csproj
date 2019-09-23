@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -33,7 +33,6 @@
     <Folder Include="Model\ViewModel\" />
     <Folder Include="Model\Validations\" />
     <Folder Include="Model\ServiceModel\" />
-    <Folder Include="Model\ResultModel\" />
   </ItemGroup>
 
 </Project>

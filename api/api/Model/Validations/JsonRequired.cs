@@ -10,7 +10,7 @@ namespace api.Model.Validations
     {
         public JsonRequired()
         {
-            ErrorMessage = $"{0}: Required.";
+            ErrorMessage = "{0}: Required.";
         }
     }
 }

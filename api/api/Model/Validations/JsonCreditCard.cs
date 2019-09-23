@@ -11,12 +11,12 @@ namespace api.Model.Validations
     {
         public JsonCreditCard() : base()
         {
-            ErrorMessage = $"{0}: Invalid.";
+            ErrorMessage = "{0}: Invalid.";
         }
 
         public override bool IsValid(object value)
         {
-            if (value.ToString().Length != 14) return false;
+            if (value == null || value.ToString().Length != 14) return false;
             return new CreditCardAttribute().IsValid(value);
         }
     }

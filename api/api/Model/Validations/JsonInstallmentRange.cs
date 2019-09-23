@@ -13,7 +13,7 @@ namespace api.Model.Validations
 
         public JsonInstallmentRange() : base(Minimum, Maximum)
         {
-            ErrorMessage = $"{0}: Between {Minimum} and {Maximum}.";
+            ErrorMessage = "{0}: Between " + Minimum +" and " + Maximum + ".";
         }
     }
 }

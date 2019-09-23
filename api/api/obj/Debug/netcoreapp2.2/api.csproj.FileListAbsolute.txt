@@ -12,3 +12,17 @@ C:\Users\alanc\source\repos\api\api\obj\Debug\netcoreapp2.2\api.RazorTargetAssem
 C:\Users\alanc\source\repos\api\api\bin\Debug\netcoreapp2.2\api.pdb
 C:\Users\alanc\source\repos\api\api\obj\Debug\netcoreapp2.2\api.dll
 C:\Users\alanc\source\repos\api\api\obj\Debug\netcoreapp2.2\api.pdb
+C:\Users\Alan\git\ProvaPagCerto\api\api\bin\Debug\netcoreapp2.2\api.deps.json
+C:\Users\Alan\git\ProvaPagCerto\api\api\bin\Debug\netcoreapp2.2\api.runtimeconfig.json
+C:\Users\Alan\git\ProvaPagCerto\api\api\bin\Debug\netcoreapp2.2\api.runtimeconfig.dev.json
+C:\Users\Alan\git\ProvaPagCerto\api\api\bin\Debug\netcoreapp2.2\api.dll
+C:\Users\Alan\git\ProvaPagCerto\api\api\bin\Debug\netcoreapp2.2\api.pdb
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.csprojAssemblyReference.cache
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.csproj.CoreCompileInputs.cache
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.RazorAssemblyInfo.cache
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.RazorAssemblyInfo.cs
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.AssemblyInfoInputs.cache
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.AssemblyInfo.cs
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.RazorTargetAssemblyInfo.cache
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.dll
+C:\Users\Alan\git\ProvaPagCerto\api\api\obj\Debug\netcoreapp2.2\api.pdb
