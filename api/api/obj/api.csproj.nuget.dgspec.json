@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alanc\\source\\repos\\api\\api\\api.csproj": {}
+    "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alanc\\source\\repos\\api\\api\\api.csproj": {
+    "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alanc\\source\\repos\\api\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\alanc\\source\\repos\\api\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\alanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alanc\\source\\repos\\api\\api\\obj\\",
+        "projectPath": "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\Alan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Alan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -40,43 +42,6 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
           "imports": [
             "net461"
           ],
