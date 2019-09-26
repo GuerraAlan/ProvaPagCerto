@@ -3,8 +3,6 @@ using api.Model.EntityModel;
 using api.Model.ResultModel;
 using api.Model.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,11 +10,11 @@ namespace api.Controllers
 {
     [Route("api/v1/transaction")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class TransactionController : ControllerBase
     {
         private readonly ApiDbContext _dbContext;
 
-        public ValuesController(ApiDbContext apiDbContext)
+        public TransactionController(ApiDbContext apiDbContext)
         {
             _dbContext = apiDbContext;
         }
@@ -38,11 +36,10 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        [Route("avaliable-to-advance")]
+        [Route("available-to-advance")]
         public async Task<IActionResult> GetAvailableToAdvanceRequest()
         {
-            var transactionQuery = _dbContext.Transaction.AvailableToAdvanceRequest();
-            var transactions = transactionQuery.ToList();
+            var transactions = _dbContext.Transaction.AvailableToAdvanceRequest().ToList();
 
             return new PaymentsToAdvanceListJson(transactions);
         }

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using api.Infrastructure;
 
 namespace api.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190926051114_AddColumn_Transaction_InstallmentsAmount")]
+    partial class AddColumn_Transaction_InstallmentsAmount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,7 +31,7 @@ namespace api.Migrations
 
                     b.Property<DateTime>("InitialDate");
 
-                    b.Property<int>("InstallmentsAmount");
+                    b.Property<int>("InstallmentsAmmount");
 
                     b.Property<int>("Status");
 
@@ -56,8 +58,6 @@ namespace api.Migrations
                     b.Property<int>("InstallmentsAmount");
 
                     b.Property<double>("TransactionValue");
-
-                    b.Property<double>("TransferAmount");
 
                     b.Property<DateTime?>("TransferDate");
 

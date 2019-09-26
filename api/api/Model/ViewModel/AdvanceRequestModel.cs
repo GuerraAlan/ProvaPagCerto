@@ -8,22 +8,18 @@ using System.Threading.Tasks;
 
 namespace api.Model.ViewModel
 {
-    public class PayModel
+    public class AdvanceRequestModel
     {
-        [Display(Name = "amount"), JsonRequired, JsonCurrency]
-        public double? Amount { get; set; }
+        [Display(Name = "transactionId"), JsonRequired]
+        public long? TransactionId { get; set; }
         [Display(Name = "installmentsAmount"), JsonRequired, JsonInstallmentRange]
         public int? InstallmentsAmount { get; set; }
-        [Display(Name = "credicCardNumber"), JsonRequired]
-        public string CreditCardNumber { get; set; }
 
-        public Transaction Map() => new Transaction
+        public AdvanceRequest Map() => new AdvanceRequest
         {
             InitialDate = DateTime.Now,
             InstallmentsAmount = InstallmentsAmount.Value,
-            TransactionValue = Amount.Value,
-            CardLastDigits = int.Parse(CreditCardNumber.Substring(12))
+            TransactionId = TransactionId.Value
         };
-
     }
 }

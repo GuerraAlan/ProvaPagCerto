@@ -31,6 +31,8 @@ namespace api.Model.EntityModel
 
             entity.Property(p => p.DoneAnalysisDate).HasColumnType("Data_Conclusao_Analise");
 
+            entity.Property(p => p.InstallmentsAmount).HasColumnName("Numero_Parcelas").IsRequired();
+
             entity.Property(p => p.AnalysisResult).HasColumnType("Resultado_Analise");
         }
     }

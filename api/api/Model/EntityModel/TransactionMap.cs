@@ -25,9 +25,11 @@ namespace api.Model.EntityModel
 
             entity.Property(p => p.TransactionValue).HasColumnName("Valor_Transacao").IsRequired();
 
-            entity.Property(p => p.InstallmentsAmmount).HasColumnName("Numero_Parcelas").IsRequired();
+            entity.Property(p => p.InstallmentsAmount).HasColumnName("Numero_Parcelas").IsRequired();
 
             entity.Property(p => p.CardLastDigits).HasColumnName("Digitos_Cartao").IsRequired();
+
+            entity.Property(p => p.TransferAmount).HasColumnName("Valor_Pago").IsRequired();
 
             entity.HasMany(p => p.AdvanceRequests)
                 .WithOne(p => p.Transaction);
