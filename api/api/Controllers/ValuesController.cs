@@ -1,4 +1,5 @@
 ﻿using api.Infrastructure;
+using api.Model.EntityModel;
 using api.Model.ResultModel;
 using api.Model.ViewModel;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace api.Controllers
 {
-    [Route("api/v1")]
+    [Route("api/v1/transaction")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
@@ -34,6 +35,16 @@ namespace api.Controllers
             }
 
             return new PaymentJson(payProcessing.Payment);
+        }
+
+        [HttpGet]
+        [Route("avaliable-to-advance")]
+        public async Task<IActionResult> GetAvailableToAdvanceRequest()
+        {
+            var transactionQuery = _dbContext.Transaction.AvailableToAdvanceRequest();
+            var transactions = transactionQuery.ToList();
+
+            return new PaymentsToAdvanceListJson(transactions);
         }
     }
 }

@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\tests\\tests.csproj": {}
+    "C:\\Users\\alanc\\source\\repos\\api\\tests\\tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\tests\\tests.csproj": {
+    "C:\\Users\\alanc\\source\\repos\\api\\tests\\tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\tests\\tests.csproj",
+        "projectUniqueName": "C:\\Users\\alanc\\source\\repos\\api\\tests\\tests.csproj",
         "projectName": "tests",
-        "projectPath": "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\tests\\tests.csproj",
-        "packagesPath": "C:\\Users\\Alan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alan\\git\\ProvaPagCerto\\api\\tests\\obj\\",
+        "projectPath": "C:\\Users\\alanc\\source\\repos\\api\\tests\\tests.csproj",
+        "packagesPath": "C:\\Users\\alanc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alanc\\source\\repos\\api\\tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\alanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

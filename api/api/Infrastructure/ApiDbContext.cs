@@ -24,6 +24,7 @@ namespace api.Infrastructure
 
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
+            //options.WithExtension(TransactionQuery);
         }
     }
 }
