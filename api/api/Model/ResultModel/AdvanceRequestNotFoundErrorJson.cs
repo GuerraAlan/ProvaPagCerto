@@ -1,4 +1,4 @@
-﻿using api.Infrastructure;
+﻿using api.Model.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace api.Model.ResultModel
 {
-    public class AdvanceRequestErrorJson : IActionResult
+    public class AdvanceRequestNotFoundErrorJson : IActionResult
     {
-        private AdvanceRequestProcessing _advanceRequestProcessing;
+        private OngoingRequestModel _ongoingRequestModel;
 
-        public AdvanceRequestErrorJson(AdvanceRequestProcessing AdvanceRequestProcessing)
+        public AdvanceRequestNotFoundErrorJson(OngoingRequestModel ongoingRequestModel)
         {
-            _advanceRequestProcessing = AdvanceRequestProcessing;
+            _ongoingRequestModel = ongoingRequestModel;
         }
 
         public Task ExecuteResultAsync(ActionContext context)

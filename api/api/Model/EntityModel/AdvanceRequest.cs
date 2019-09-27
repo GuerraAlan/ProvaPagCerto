@@ -16,6 +16,6 @@ namespace api.Model.EntityModel
         public DateTime? DoneAnalysisDate { get; set; }
         public bool? AnalysisResult { get; set; }
         public int InstallmentsAmount { get; set; }
-        public virtual double TotalRequestValue => (InstallmentsAmount / Transaction.InstallmentsAmount) * Transaction.TransferAmount * (1 - (RATE * InstallmentsAmount));
+        public virtual double TotalRequestValue => ((double)InstallmentsAmount / (double)Transaction.InstallmentsAmount) * Transaction.TransferAmount * (1 - (RATE * InstallmentsAmount));
     }
 }

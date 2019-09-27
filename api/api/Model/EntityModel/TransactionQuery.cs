@@ -9,7 +9,6 @@ namespace api.Model.EntityModel
 {
     public static class TransactionQuery
     {
-
         public static IQueryable<Transaction> AvailableToAdvanceRequest(this IQueryable<Transaction> transactions)
         {
             return transactions.Where(transaction => 
