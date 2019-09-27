@@ -1,23 +1,15 @@
 ﻿using api.Model.EntityModel;
 using api.Model.EntityModel.Enums;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace api.Infrastructure
 {
-    public class AdvanceRequestProcessing
+    public class AdvanceRequestProcessing : AProcessing
     {
-        private ApiDbContext _dbContext;
         public AdvanceRequest Request { get; private set; }
 
-        public AdvanceRequestProcessing(ApiDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        public AdvanceRequestProcessing(ApiDbContext dbContext) : base(dbContext) { }
 
         public bool Process(AdvanceRequest request)
         {
@@ -27,13 +19,13 @@ namespace api.Infrastructure
 
             if(requestTransaction == null)
             {
-                Console.WriteLine("RequestTransactionID Invalid");//TODO: Ver maneira melhor depois, exception?
+                LaunchError("RequestTransactionID Invalid");
                 return false;
             }
 
-            if(requestTransaction.AdvanceRequests.Any(ar => !(ar.AnalysisResult.Equals(AdvanceRequestStatus.Finalizada)&& ar.AnalysisResult.Equals(true))))
+            if(requestTransaction.AdvanceRequests.Any(ar => !ar.AnalysisResult.Equals(AdvanceRequestStatus.Finalizada)))
             {
-                Console.WriteLine("Already open request");
+                LaunchError("Already open request");
                 return false;
             }
 
@@ -41,7 +33,7 @@ namespace api.Infrastructure
 
             if(request.InstallmentsAmount + adiantadas > requestTransaction.InstallmentsAmount)
             {
-                Console.WriteLine("Exceded Installments limit");
+                LaunchError("Exceded Installments limit");
                 return false;
             }
 

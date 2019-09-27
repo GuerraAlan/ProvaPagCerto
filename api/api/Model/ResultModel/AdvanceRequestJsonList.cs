@@ -1,4 +1,4 @@
-﻿using api.Model.ViewModel;
+﻿using api.Model.EntityModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 
 namespace api.Model.ResultModel
 {
-    public class AdvanceRequestNotFoundErrorJson : IActionResult
+    public class AdvanceRequestJsonList : IActionResult
     {
-        public long Id { get; set; }
+        public AdvanceRequestJsonList() { }
 
-        public AdvanceRequestNotFoundErrorJson(long id)
+        public AdvanceRequestJsonList(List<AdvanceRequest> requests)
         {
-            Id = id;
+            Requests = requests.Select(t => new AdvanceRequestJson(t)).ToList();
         }
+
+        public List<AdvanceRequestJson> Requests { get; set; }
 
         public Task ExecuteResultAsync(ActionContext context)
         {

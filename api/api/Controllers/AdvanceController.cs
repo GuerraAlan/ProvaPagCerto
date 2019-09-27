@@ -46,10 +46,47 @@ namespace api.Controllers
 
             if(advanceRequest == null)
             {
-                return new AdvanceRequestNotFoundErrorJson(model);
+                return new AdvanceRequestNotFoundErrorJson(model.TransactionId.Value);
             }
 
             return new AdvanceRequestJson(advanceRequest);
+        }
+
+        [HttpPut]
+        [Route("start-request-analysis")]
+        public async Task<IActionResult> StartRequestAnalysis(StartRequestAnalysisModel model)
+        {
+            var startRequestAnalysisProcessing = new StartRequestAnalysisProcessing(_dbContext);
+
+            if (!startRequestAnalysisProcessing.Process(model))
+            {
+                return new AdvanceRequestNotFoundErrorJson(model.RequestId.Value);
+            }
+
+            return new AdvanceRequestJson(startRequestAnalysisProcessing.Request);
+        }
+
+        [HttpPut]
+        [Route("finish-request-analysis")]
+        public async Task<IActionResult> FinishRequestAnalysis(FinishRequestAnalysisModel model)
+        {
+            var finishRequestAnalysisProcessing = new FinishRequestAnalysisProcessing(_dbContext);
+
+            if (!finishRequestAnalysisProcessing.Process(model))
+            {
+                return new AdvanceRequestNotFoundErrorJson(model.RequestId.Value);
+            }
+
+            return new AdvanceRequestJson(finishRequestAnalysisProcessing.Request);
+        }
+
+        [HttpGet]
+        [Route("requests-between-dates")]
+        public async Task<IActionResult> RequestsBetweenDates(RequestsBetweenDatesModel model)
+        {
+            var advanceRequests = _dbContext.AdvanceRequest.GetBetweenDates(model.InitalDate.Value, model.FinalDate.Value).ToList();
+
+            return new AdvanceRequestJsonList(advanceRequests);
         }
     }
 }

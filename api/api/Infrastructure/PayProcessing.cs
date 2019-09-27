@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace api.Infrastructure
 {
-    public class PayProcessing
+    public class PayProcessing : AProcessing
     {
-        private ApiDbContext _dbContext;
         public Transaction Payment { get; private set; }
 
-        public PayProcessing(ApiDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        public PayProcessing(ApiDbContext dbContext) : base(dbContext) { }
 
         public bool Process(Transaction payment)
         {
