@@ -1,8 +1,6 @@
 ﻿using api.Model.EntityModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace api.Model.ResultModel
@@ -13,7 +11,7 @@ namespace api.Model.ResultModel
 
         public PaymentJson(Transaction payment)
         {
-            Id = payment.Id??0;
+            Id = payment.Id ?? 0;
             InitialDate = payment.InitialDate;
             Amount = payment.TransferAmount;
         }

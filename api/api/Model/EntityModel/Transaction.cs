@@ -1,8 +1,6 @@
-﻿using api.Model.EntityModel.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace api.Model.EntityModel
 {
@@ -14,7 +12,7 @@ namespace api.Model.EntityModel
         public double TransactionValue { get; set; }
         public int InstallmentsAmount { get; set; }
         public int CardLastDigits { get; set; }
-        public double TransferAmount {get; set;}
+        public double TransferAmount { get; set; }
         public virtual List<AdvanceRequest> AdvanceRequests { get; set; }
 
         public virtual int AvailableInstallmentsAmmount => InstallmentsAmount - AdvanceRequests.Sum(ar => ar.InstallmentsAmount);

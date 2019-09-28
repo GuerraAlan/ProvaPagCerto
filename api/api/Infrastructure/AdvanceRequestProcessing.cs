@@ -1,6 +1,5 @@
 ﻿using api.Model.EntityModel;
 using api.Model.EntityModel.Enums;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace api.Infrastructure
@@ -14,16 +13,16 @@ namespace api.Infrastructure
         public bool Process(AdvanceRequest request)
         {
             Request = request;
-            
-            var requestTransaction = _dbContext.Transaction.Include(t => t.AdvanceRequests).Where(t => t.Id == request.TransactionId).ToList()?.First();
 
-            if(requestTransaction == null)
+            var requestTransaction = _dbContext.Transaction.Where(t => t.Id == request.TransactionId).ToList()?.First();
+
+            if (requestTransaction == null)
             {
                 LaunchError("RequestTransactionID Invalid");
                 return false;
             }
 
-            if(requestTransaction.AdvanceRequests.Any(ar => !ar.AnalysisResult.Equals(AdvanceRequestStatus.Finalizada)))
+            if (requestTransaction.AdvanceRequests.Any(ar => !ar.AnalysisResult.Equals(AdvanceRequestStatus.Finalizada)))
             {
                 LaunchError("Already open request");
                 return false;
@@ -31,7 +30,7 @@ namespace api.Infrastructure
 
             var adiantadas = requestTransaction.AdvanceRequests.Select(ar => ar.InstallmentsAmount).Sum();
 
-            if(request.InstallmentsAmount + adiantadas > requestTransaction.InstallmentsAmount)
+            if (request.InstallmentsAmount + adiantadas > requestTransaction.InstallmentsAmount)
             {
                 LaunchError("Exceded Installments limit");
                 return false;

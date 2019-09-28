@@ -2,9 +2,7 @@
 using api.Model.EntityModel.Enums;
 using api.Model.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace api.Infrastructure
 {

@@ -1,10 +1,7 @@
-﻿using api.Infrastructure;
-using api.Model.EntityModel;
+﻿using api.Model.EntityModel;
 using api.Model.EntityModel.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace api.Model.ResultModel

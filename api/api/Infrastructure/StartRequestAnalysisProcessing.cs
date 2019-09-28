@@ -2,9 +2,7 @@
 using api.Model.EntityModel.Enums;
 using api.Model.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace api.Infrastructure
 {
@@ -24,7 +22,7 @@ namespace api.Infrastructure
                 return false;
             }
 
-            if(Request.Status != AdvanceRequestStatus.AguardandoAnalise)
+            if (Request.Status != AdvanceRequestStatus.AguardandoAnalise)
             {
                 LaunchError("Request Analysis already started");
                 return false;

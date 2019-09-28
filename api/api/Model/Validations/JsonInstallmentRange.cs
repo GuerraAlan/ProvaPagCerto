@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace api.Model.Validations
 {
@@ -13,7 +9,7 @@ namespace api.Model.Validations
 
         public JsonInstallmentRange() : base(Minimum, Maximum)
         {
-            ErrorMessage = "{0}: Between " + Minimum +" and " + Maximum + ".";
+            ErrorMessage = "{0}: Between " + Minimum + " and " + Maximum + ".";
         }
     }
 }

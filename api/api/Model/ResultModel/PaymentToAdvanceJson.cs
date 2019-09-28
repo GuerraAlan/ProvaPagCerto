@@ -46,9 +46,9 @@ namespace api.Model.ResultModel
 
         private Installment calcInstallment(int numberOfInstallments, int maxInstallments, double value)
         {
-            var missing = maxInstallments - numberOfInstallments +1;
+            var missing = maxInstallments - numberOfInstallments + 1;
             var rate = 1 - (numberOfInstallments * AdvanceRequest.RATE);
-            return new Installment(numberOfInstallments, (((double)numberOfInstallments / (double)(maxInstallments)) * value)*rate);
+            return new Installment(numberOfInstallments, (((double)numberOfInstallments / (double)(maxInstallments)) * value) * rate);
         }
 
         public class Installment
@@ -65,5 +65,5 @@ namespace api.Model.ResultModel
         }
     }
 
-    
+
 }

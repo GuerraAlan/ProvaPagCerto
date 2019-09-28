@@ -4,7 +4,6 @@ using api.Model.EntityModel.Enums;
 using api.Model.ResultModel;
 using api.Model.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -44,7 +43,7 @@ namespace api.Controllers
         {
             var advanceRequest = _dbContext.AdvanceRequest.AvailableToAdvanceRequest(model.TransactionId.Value).ToList().First();
 
-            if(advanceRequest == null)
+            if (advanceRequest == null)
             {
                 return new AdvanceRequestNotFoundErrorJson(model.TransactionId.Value);
             }
